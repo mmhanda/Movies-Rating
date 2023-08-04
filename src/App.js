@@ -5,59 +5,18 @@ import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com?apikey=565ea02c";
 
-const movie1 = {
-  "Title": "Superman",
-  "Year": "1978",
-  "Rated": "PG",
-  "Released": "15 Dec 1978",
-  "Runtime": "143 min",
-  "Genre": "Action, Adventure, Sci-Fi",
-  "Director": "Richard Donner",
-  "Writer": "Jerry Siegel, Joe Shuster, Mario Puzo",
-  "Actors": "Christopher Reeve, Margot Kidder, Gene Hackman",
-  "Plot": "An alien orphan is sent from his dying planet to Earth, where he grows up to become his adoptive home's first and greatest superhero.",
-  "Language": "English",
-  "Country": "United States, United Kingdom, Canada",
-  "Awards": "Nominated for 3 Oscars. 17 wins & 23 nominations total",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
-  "Ratings": [
-      {
-          "Source": "Internet Movie Database",
-          "Value": "7.4/10"
-      },
-      {
-          "Source": "Rotten Tomatoes",
-          "Value": "94%"
-      },
-      {
-          "Source": "Metacritic",
-          "Value": "82/100"
-      }
-  ],
-  "Metascore": "82",
-  "imdbRating": "7.4",
-  "imdbVotes": "181,656",
-  "imdbID": "tt0078346",
-  "Type": "movie",
-  "DVD": "01 Jan 2008",
-  "BoxOffice": "$134,478,449",
-  "Production": "N/A",
-  "Website": "N/A",
-  "Response": "True"
-}
-
 const App = () => {
   
-  const [movies, setmovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   const searchMovie = async(title) => {
     const respones = await fetch(`${API_URL}&t=${title}`);
     const data = await respones.json();
-    setmovies(data)
+    await setMovies(data.Search);
   }
 
   useEffect(() => {
-    searchMovie("spiderman")
+    searchMovie("superman")
   },[]);
 
   return (
@@ -71,14 +30,26 @@ const App = () => {
         />
         <img
           src={SearchIcon}
-          onClick={() => {
-            console.log("pressed")
-          }}
+          onClick={() => {} }
         />
       </div>
+
+      { movies?.length >= 0
+        ? (
+            <div className="container">
+              <h2>Sorry No Movie Found</h2>
+            </div>
+        ) : (
+            <div className="empty">
+              {movies.map()}
+                <MovieCard movies={movies}/>
+            </div>
+          )
+      };
+      {/* {console.log("lengh is:" + movies.length)}
       <div className="container">
-          <MovieCard movie = {movies[0]}/>
-      </div>
+          <MovieCard movie = {movies}/>
+      </div> */}
     </div>
   );
 }
