@@ -1,10 +1,11 @@
-import { useEffect } from "react";
-import "./App.css"
-import SearchIcon from "./search.svg"
+import { useState, useEffect } from "react";
+import "./App.css";
+import SearchIcon from "./search.svg";
+import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com?apikey=565ea02c";
 
-const movie = {
+const movie1 = {
   "Title": "Superman",
   "Year": "1978",
   "Rated": "PG",
@@ -46,11 +47,13 @@ const movie = {
 }
 
 const App = () => {
+  
+  const [movies, setmovies] = useState([]);
 
   const searchMovie = async(title) => {
     const respones = await fetch(`${API_URL}&t=${title}`);
     const data = await respones.json();
-    console.log(data);
+    setmovies(data)
   }
 
   useEffect(() => {
@@ -74,15 +77,7 @@ const App = () => {
         />
       </div>
       <div className="container">
-        <div className="movie">
-          <div>
-            <p>{movie.Year} </p>
-          </div>
-          <div>
-            <img src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/400"} 
-                alt={movie.Title}/>
-          </div>
-        </div>
+          <MovieCard movie = {movies[0]}/>
       </div>
     </div>
   );
