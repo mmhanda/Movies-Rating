@@ -1,8 +1,14 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    if (counter === 10)
+      alert("You have reached the max")
+  },[counter])
+
   return (
     <div className="App">
     <button onClick={() => {setCounter((prevcount) => prevcount - 1)}}>-</button>
