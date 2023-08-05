@@ -14,13 +14,18 @@ const App = () => {
   const searchMovie = async(title) => {
     const respones = await fetch(`${API_URL}&s=${title}`);
     const data = await respones.json();
-    console.log(data.Search);
     setMovies(data.Search);
   }
 
   useEffect(() => {
     searchMovie("superman")
   },[]);
+
+  const key_handler = (e) => {
+    if (e.key === 'Enter') {
+      searchMovie(searchPhrase);
+    }
+  }
 
   return (
     <div className="app">
@@ -31,6 +36,7 @@ const App = () => {
           placeholder="search for movie"
           value={searchPhrase}
           onChange={(e) => { setSearchPhrase(e.target.value) }}
+          onKeyPress={key_handler}
         />
         <img
           src={SearchIcon}
