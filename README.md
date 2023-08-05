@@ -9,7 +9,7 @@ The Movie Data App is a simple React application that allows users to search for
 
 ## Demo
 
-You can check out a live demo of the app at [Movie Data App Demo](https://mmhanda.github.io/movies_rating/).
+You can check out a live demo of the app at [Movie Data App Demo](https://mmhanda.github.io/Movies-Rating/).
 
 ## Features
 
