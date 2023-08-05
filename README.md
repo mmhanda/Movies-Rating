@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Movie Data App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Movie Data App Screenshot](https://cdn.discordapp.com/attachments/1129193660978835517/1137250676091650148/Screenshot_from_2023-08-05_06-06-39.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Movie Data App is a simple React application that allows users to search for movies and view movie details. It fetches movie data from an external API and displays the information in a user-friendly interface. Users can search for movies by title and see basic details such as movie title, release year, and movie poster.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can check out a live demo of the app at [Movie Data App Demo](https://your-demo-link-here.com).
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Search for movies by title.
+- View movie details, including title, release year, and movie poster.
+- User-friendly interface.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow the instructions below to get a copy of the project running on your local machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository to your local machine using:
 
-### `npm run eject`
+    git clone git@github.com:mmhanda/movies_rating.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    cd movies_rating
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. I'm leaving my API key to every to use it
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Start the development server:
 
-### Code Splitting
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Open your web browser and visit `http://localhost:3000` to access the Movie Data App.
 
-### Analyzing the Bundle Size
+4. Enter a movie title in the search box and click "Search" to see the results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Dependencies
 
-### Making a Progressive Web App
+The app uses the following main dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React: A JavaScript library for building user interfaces.
 
-### Advanced Configuration
+For a full list of dependencies, check the `package.json` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are welcome! If you find any issues or have suggestions for improvements, please create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- The app fetches movie data from [your-movie-api-provider](https://www.omdbapi.com/).
+
