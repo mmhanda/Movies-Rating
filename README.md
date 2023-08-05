@@ -35,7 +35,7 @@ Follow the instructions below to get a copy of the project running on your local
 
 ## Usage
 
-1. I'm leaving my API key to every to use it
+### 1. I'm leaving my API key for every one feel free to use it :)
 
 2. Start the development server:
 
